@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titleView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Equation Solver"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/coefsView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="8dp"
+        android:text="Input coefficients:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleView" />
+
+    <EditText
+        android:id="@+id/coefANumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:ems="10"
+        android:hint="a"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/coefsView"
+        app:layout_constraintTop_toTopOf="@+id/coefsView" />
+
+    <EditText
+        android:id="@+id/coefBNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:ems="10"
+        android:hint="b"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/coefsView"
+        app:layout_constraintTop_toBottomOf="@+id/coefANumber" />
+
+    <EditText
+        android:id="@+id/coefCNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:ems="10"
+        android:hint="c"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/coefsView"
+        app:layout_constraintTop_toBottomOf="@+id/coefBNumber" />
+
+    <EditText
+        android:id="@+id/coefDNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:ems="10"
+        android:hint="d"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/coefsView"
+        app:layout_constraintTop_toBottomOf="@+id/coefCNumber" />
+
+    <EditText
+        android:id="@+id/answerNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:ems="10"
+        android:hint="y"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/coefsView"
+        app:layout_constraintTop_toBottomOf="@+id/coefDNumber" />
+
+    <EditText
+        android:id="@+id/populationNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Population Size"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/coefsView"
+        app:layout_constraintTop_toBottomOf="@+id/answerNumber" />
+
+    <EditText
+        android:id="@+id/mutationNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:ems="10"
+        android:hint="Chance of Mutation"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/coefsView"
+        app:layout_constraintTop_toBottomOf="@+id/populationNumber" />
+
+    <EditText
+        android:id="@+id/iterationNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:ems="10"
+        android:hint="Iteration Limit"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/coefsView"
+        app:layout_constraintTop_toBottomOf="@+id/mutationNumber" />
+
+    <TextView
+        android:id="@+id/answerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:text="Answer:"
+        app:layout_constraintEnd_toStartOf="@+id/answerNumber"
+        app:layout_constraintTop_toBottomOf="@+id/coefDNumber" />
+
+    <TextView
+        android:id="@+id/resultView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iterationNumber" />
+
+    <TextView
+        android:id="@+id/resultIterationsView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultView" />
+
+    <Button
+        android:id="@+id/solveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:onClick="onClickSolve"
+        android:text="Solve"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultIterationsView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
