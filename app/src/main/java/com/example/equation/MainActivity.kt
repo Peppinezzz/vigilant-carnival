@@ -2,6 +2,7 @@ package com.example.equation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -43,6 +44,8 @@ class MainActivity : AppCompatActivity() {
             if (elapsed < minTime) {
                 minTime = elapsed
             }
+            val message = "The iteration " + i + " took " + elapsed + "ms."
+            Log.d("userspace", message)
         }
         val result = "The longest: " + maxTime + "ms. The shortest: " + minTime + "ms."
         resultIterationsView.text = result
